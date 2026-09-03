@@ -1,0 +1,80 @@
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (main)
+$ git merge bug-fix-typo
+Updating ad95b0a..15ad140
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (main)
+$ git branch bug-fix-typo
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (main)
+$ git checkout bug-fix-typo
+Switched to branch 'bug-fix-typo'
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
+$ check status
+bash: check: command not found
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
+$ git status
+On branch bug-fix-typo
+nothing to commit, working tree clean
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
+$ git status
+On branch bug-fix-typo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
+$ git status
+On branch bug-fix-typo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  $ git commit -a
+[bug-fix-typo 15ad140] fix typo in readme
+ Committer: Rajendra G Godbole <hn475@cummins.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+
+hn475@L1-S0207494 MINGW64 ~/github/git&gith/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
+$ git push -u origin bug-fix-typo
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 317 bytes | 317.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug-fix-typo' on GitHub by visiting:
+remote:      https://github.com/rgg-git/mcino-Introduction-to-Git-and-GitHub/pull/new/bug-fix-typo
+remote:
+To https://github.com/rgg-git/mcino-Introduction-to-Git-and-GitHub.git
+ * [new branch]      bug-fix-typo -> bug-fix-typo
+branch 'bug-fix-typo' set up to track 'origin/bug-fix-typo'.
+
+        modified:   README.md
